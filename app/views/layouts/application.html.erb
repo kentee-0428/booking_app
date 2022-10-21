@@ -10,6 +10,34 @@
   </head>
 
   <body>
+    <header>
+      <div class="header-container">
+        <div class="header-left">
+          <div class="header-logo">
+            <%= link_to image_tag("https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"), root_path %>
+          </div>
+          <div class="search-items">
+            <div class="area">エリア検索</div>
+            <div class="keyword">キーワード検索</div>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="login btn">
+            <%= link_to "ログイン", new_user_session_path %>
+          </div>
+          <div class="signup btn">
+            <%= link_to "登録する", new_user_registration_path %>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="fooder-container">
+        <div class="fooder-logo">
+          <p>© 2020 POTEPAN.INC.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
