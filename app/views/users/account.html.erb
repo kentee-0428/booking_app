@@ -1,0 +1,33 @@
+<div class="account">
+  <div class="account-left">
+    <div class="account-links">
+      <%= link_to "toルーム登録", new_room_path, class: "new-room-link" %>
+      <%= link_to "toプロフィール編集", profile_users_path, class: "profile-link" %>
+      <%= link_to "to登録済みルーム", posts_rooms_path, class: "posted-room-link" %>
+      <%= link_to "to予約済みルーム", reservations_path, class: "reservationed-room-link" %>
+    </div>
+  </div>
+  <div class="account-right">
+    <div class="account-form">
+      <h1 class="heading">アカウント</h1>
+      <div class="account-content">
+        <div class="account-section-name">
+          <p>メールアドレス</p>
+        </div>
+        <div class="account-section-value">
+          <%= @user.email %>
+        </div>
+      </div>
+      <div class="account-content">
+        <div class="account-section-name">
+          <p>パスワード</p>
+        </div>
+        <div class="account-section-value">
+          <p>*********</p>
+        </div>
+      </div>
+      <%= link_to "編集", edit_user_registration_path, class: "account-btn" %>
+      <%= link_to "削除", user_path(@user), method: :delete, data: { confirm: "ユーザーのアカウントを本当に削除しますか？" }, class: "delete-btn" %>
+    </div>
+  </div>
+</div>

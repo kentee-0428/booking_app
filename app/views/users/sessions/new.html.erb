@@ -1,0 +1,22 @@
+<div class="container-device">
+  <div class="device-fram">
+    <div class="device-fram-inner">
+      <h1 class="heading">ログイン</h1>
+      <%= form_with model: @user, url: new_user_session_path, local: true do |f| %>
+        <%= render "users/shared/error_messages", resource: @user %>
+        <div class="login-field-content">
+          <div class="login-field">
+            <%= f.email_field :email, class: "login-field-btn", placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+          </div>
+        </div>
+        <div class="login-field-content">
+          <div class="login-field">
+            <%= f.password_field :password, class: "login-field-btn", placeholder: "パスワード", autocomplete: "password" %>
+          </div>
+        </div>
+        <%= f.submit "ログイン", class: "actions" %>
+      <% end %>
+      <%= link_to "新しいアカウントを作成", new_user_registration_path, class: "resignup" %>
+    </div>
+  </div>
+</div>

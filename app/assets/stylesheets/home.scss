@@ -1,0 +1,107 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.top {
+  color: black;
+}
+
+.top-main {
+  background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_cover_top.jpg);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}
+
+.form-area {
+  width: 387px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.form-area h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.form-area p {
+  font-size: 11px;
+}
+
+.top-container {
+  max-width: 50%;
+  padding: 100px;
+}
+
+.areas-main {
+  width: 100%;
+  margin:0 auto;
+}
+
+.areas-container {
+  max-width: 960px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.area-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.area-item {
+  max-width: 25%;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.area-item-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.place-name {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  text-align: left;
+  padding-left: 17px;
+}
+
+.top-seach-area, .top-seach-btn {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.top-seach-area {
+  margin-bottom: 24px;
+}
+
+.top-seach-btn {
+  background-color: #007bff;
+  color:white;
+}

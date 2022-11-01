@@ -1,0 +1,246 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.heading {
+  font-size: 25px;
+}
+
+//---------------------- index ---------------------------
+.rooms-container {
+  padding: 0 20px;
+}
+
+.rooms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rooms-aroom {
+  background-color: #F6F8F9;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 15px;
+  border-color: #6c757d;
+}
+
+.rooms-image-icon {
+  width: 100%;
+  height: 180px;
+}
+
+.rooms-profile {
+  padding: 10px;
+}
+
+.rooms-title, .rooms-address, .rooms-price {
+  margin-bottom: 5px;
+}
+
+.rooms-price {
+  text-align: right;
+}
+
+.rooms-count {
+  padding-left: 20px;
+}
+
+.rooms-link {
+  display: block;
+}
+//---------------------- index ---------------------------
+
+
+//---------------------- show ---------------------------
+.room-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 30px 0;
+  display: flex;
+}
+
+.room-show-left, .room-show-right {
+  width: 100%;
+}
+
+.room-show-left {
+  margin-right: 30px;
+  border: 1px solid #d3d3d3;
+}
+
+.room-image {
+  width: 630px;
+  height: 356px;
+  object-fit: cover;
+}
+
+.room-show-profile {
+  padding: 20px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.room-show-user-image {
+  margin-right: 20px;
+}
+
+.room-show-profile {
+  display: flex;
+}
+
+.room-show-title, .room-show-address {
+  padding: 5px;
+}
+
+.room-show-introduction {
+  padding: 30px 20px 30px;
+  margin-bottom: 16px;
+}
+// -------予約フォーム-------
+
+.room-show-price {
+  margin-bottom: 8px;
+}
+
+.room-show-nav {
+  border:1px solid #d3d3d3;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+}
+
+.room-show-date-select {
+  padding: 15px 0;
+}
+
+.date-select {
+  padding: 6px 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.show-login-btn {
+  background-color: #4a90e2;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+//---------------------- show ---------------------------
+
+// ----------------------room新規登録--------------------------
+.room-new {
+  display: flex;
+}
+
+.room-new-nav {
+  width: 250px;
+}
+
+.room-new-container {
+  background-color: #d3d3d3;
+  width: 100%;
+}
+
+.room-new-form {
+  background-color: white;
+  max-width: 960px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.room-new-form h1 {
+  font-size: 20px;
+}
+
+.update-content {
+  padding: 20px;
+  display: flex;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.update-field {
+  width: 80%;
+  padding: 6px 12px;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+.must-notice {
+  width: 20%;
+}
+
+.introduction {
+  min-height: 150px;
+}
+
+.new-field::before {
+  content: "必須";
+  color: white;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+  display: inline-block;
+  width: 3%;
+  height: 20px;
+}
+
+.new-field {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.room-new-title {
+  width: 27%;
+  text-align: left;
+}
+
+.room-new-value {
+  width: 70%;
+  text-align: left;
+}
+
+.update-btn {
+  color: white;
+  background-color: #4a90e2;
+  padding: 5px 50px;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 20px 0 0 20px;
+}
+
+.room-new-nav h2 {
+  padding-right: 20px;
+}
+
+// ----------------------room新規登録--------------------------
+
+
+// -------------------登録したroom一覧---------------------
+.post-rooms {
+  padding: 30px 60px;
+  margin-bottom: 150px;
+}
+
+th {
+  font-size: 14px;
+  border-top: 1px solid hsl(158, 72%, 52%);
+}
+
+td {
+  padding: 15px;
+  border-top: 1px solid hsl(158, 72%, 52%);
+}
+
+.post-rooms-img {
+  width: 150px;
+  height: 90px;
+}
+
+// -------------------登録したroom一覧---------------------

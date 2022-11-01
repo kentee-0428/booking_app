@@ -1,0 +1,29 @@
+<div class="password-edit">
+  <div class="password-edit-form">
+    <h1 class="heading">アカウント編集</h1>
+    <%= form_with model:@user, url: user_registration_path, method: :put, local: true do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+      <div class="field-edit">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, class: "edit-field-btn", autofocus: true, autocomplete: "email" %>
+      </div>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+      <div class="field-edit">
+        <%= f.label :password %> <i>(変更する場合のみ入力)</i><br />
+        <%= f.password_field :password, class: "edit-field-btn", autocomplete: "new-password" %>
+      </div>
+      <div class="fielde-dit">
+        <%= f.label :password_confirmation %><i>(変更する場合のみ入力)</i><br />
+        <%= f.password_field :password_confirmation, class: "edit-field-btn", autocomplete: "new-password" %>
+      </div>
+      <div class="field-edit">
+        <%= f.label :current_password %> <br />
+        <%= f.password_field :current_password, class: "edit-field-btn", autocomplete: "current-password" %>
+      </div>
+      <%= f.submit "更新", class: "actions edit-field-btn" %>
+      <%= link_to "戻る", :back, class: "edit-field-btn btn" %>
+    <% end %>
+  </div>
+</div>

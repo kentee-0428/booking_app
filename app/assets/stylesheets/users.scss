@@ -1,0 +1,298 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+// ---------------------------共通------------------------------
+li {
+  list-style: none;
+  color: #ea2e56;
+}
+
+.device-fram {
+  max-width: 600px;
+  text-align: center;
+  padding: 24px;
+  margin: 0px auto;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px #3c3c3c;
+}
+
+.device-fram-inner {
+  width: 450px;
+  text-align: center;
+  padding: 24px;
+  margin: 0 auto;
+}
+
+// ---------------------------共通------------------------------
+
+
+// ------------------------ユーザー新規登録--------------------
+.container {
+  max-width: 960px;
+  width: 100%;
+  padding: 36px 15px 0;
+  margin: 0 auto;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+
+.signup-field::before {
+  content: "必須";
+  color: white;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px 18px;
+  display: inline-block;
+}
+
+.signup-field-btn,.actions {
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  border:1px solid #d3d3d3;
+  margin-bottom: 15px;
+}
+
+.signup-field-content {
+  width: 100%;
+}
+
+.signup-field-btn {
+  width: 80%;
+  padding: 10px;
+}
+
+// ------------------------ユーザー新規登録--------------------
+
+// ------------------------ログイン--------------------------
+.login-field-btn, .actions {
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  border:1px solid #d3d3d3;
+  margin-bottom: 15px;
+}
+
+.login-field-content {
+  width: 100%;
+}
+
+.login-field::before {
+  content: "必須";
+  color: white;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px 18px;
+  display: inline-block;
+}
+
+.login-field {
+  display: flex;
+}
+
+.login-field-btn {
+  width: 80%;
+  padding: 10px;
+}
+
+.actions {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.resignup {
+  color: #4a90e2;
+}
+
+.return-login {
+  color: #4a90e2;
+}
+
+// ------------------------ログイン--------------------------
+
+
+// ---------------------ユーザーアカウント編集---------------------
+.account {
+  display: flex;
+}
+
+.account-left {
+  width: 250px;
+}
+
+.account-right {
+  background-color: #d3d3d3;
+  width: 100%;
+}
+
+.account-form {
+  background-color: white;
+  max-width: 960px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.account-content {
+  padding: 20px;
+  display: flex;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.account-section-value {
+  width: 80%;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.account-section-name {
+  width: 20%;
+}
+
+.heading {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.account-btn {
+  color: white;
+  background-color: #4a90e2;
+  padding: 5px 50px;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 20px 0 0 20px;
+}
+
+.delete-btn {
+  color: white;
+  background-color: #e24a68;
+  padding: 5px 50px;
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 20px 0 0 20px;
+}
+
+.account-link, .profile-link, .new-room-link, .posted-room-link, .reservationed-room-link {
+  padding: 20px 20px 0 0;
+  color: #4a90e2;
+  display: block;
+  font-size: 20px;
+}
+
+// ---------------------ユーザーアカウント---------------------
+
+// ---------------------パスワード変更-------------------------
+.password-edit {
+  text-align: center;
+  margin: 0 150px;
+  padding: 36px 15px 0;
+}
+
+.password-edit-form {
+  text-align: center;
+  padding: 24px;
+  margin: 0 255px;
+  border: 1px solid #d3d3d3;
+}
+
+.field-edit :before {
+  content: none;
+}
+
+.edit-field-btn {
+  padding: 6px 12px;
+  width: 65%;
+  font-size: 18px;
+  margin: 8px 0 16px;
+  border: 1px solid #d3d3d3;
+}
+.btn {
+  color: #4a90e2;
+  display: inline-block;
+  border: 0.3px solid black;
+  border-radius: 4px;
+}
+// ---------------------パスワード変更-------------------------
+
+
+// ---------------------プロフィール編集-------------------------
+.image-icon {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-device {
+  text-align: center;
+  margin: 0 150px;
+  padding: 36px 15px 0;
+}
+
+.device-fram {
+  text-align: center;
+  padding: 24px;
+  margin: 0 255px;
+  border: 1px solid #d3d3d3;
+}
+
+.profile-edit {
+  display: flex;
+}
+
+.profile-field-btn {
+  padding: 6px 12px;
+  width: 65%;
+  font-size: 18px;
+  margin: 8px 0 16px;
+  border: 1px solid #d3d3d3;
+}
+
+.field {
+  display: flex;
+  padding: 16px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.profile-edit-title {
+  width: 30%;
+  text-align: left;
+}
+
+.profile-edit-value {
+  width: 70%;
+  text-align: left;
+}
+
+.profile-edit-title ::before {
+  content: "必須";
+  color: white;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.profile-field {
+  width: 100%;
+  padding: 10px;
+}
+
+.text {
+  min-height: 100px;
+}
+// ---------------------プロフィール編集-------------------------

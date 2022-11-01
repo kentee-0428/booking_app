@@ -1,0 +1,66 @@
+<div class="room-new">
+  <div class="room-new-nav">
+    <h1>基本情報登録</h1>
+  </div>
+  <div class="room-new-container">
+    <div class="room-new-form">
+      <h1 class="heading">ルーム情報登録</h1>
+      <% if @room.errors.any? %>
+        <div class = "alert">
+          <ul>
+            <% @room.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= @room.title %>
+      <%= form_with model:@room, local: true do |f| %>
+        <div class="new-field">
+          <div class="room-new-title">
+            <%= f.label :title, "ルーム名", class: "must-notice" %>
+          </div>
+          <div class="room-new-value">
+            <%= f.text_field :title, class: "update-field", placeholder: "ルーム名を入力" %>
+          </div>
+        </div>
+        <div class="new-field">
+          <div class="room-new-title">
+            <%= f.label :introduction, "ルーム紹介", class: "must-notice" %>
+          </div>
+          <div class="room-new-value">
+            <%= f.text_area :introduction, class: "update-field introduction", placeholder: "ルーム説明を入力" %>
+          </div>
+        </div>
+        <div class="new-field">
+          <div class="room-new-title">
+            <%= f.label :price, "料金", class: "must-notice" %>
+          </div>
+          <div class="room-new-value">
+            <%= f.text_field :price, class: "update-field", placeholder: "一日あたりの料金を入力" %>
+          </div>
+        </div>
+        <div class="new-field">
+          <div class="room-new-title">
+            <%= f.label :address, "住所", class: "must-notice" %>
+          </div>
+          <div class="room-new-value">
+            <%= f.text_field :address, class: "update-field", placeholder: "住所を入力" %>
+          </div>
+        </div>
+        <div class="new-field">
+          <div class="room-new-title">
+            <%= f.label :image, "ルーム画像", class: "must-notice" %>
+          </div>
+          <div class="room-new-value">
+            <%= f.file_field :image %>
+          </div>
+        </div>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <div class="update-content-btn">
+          <%= f.submit "登録", class: "update-btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

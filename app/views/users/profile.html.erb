@@ -1,0 +1,42 @@
+<div class="container-device">
+  <div class="device-fram">
+    <h1 class="heading">プロフィール</h1>
+    <%= form_with model: @user do |f| %>
+      <% if current_user.image_name? %>
+        <div class="profile-edit">
+          <%= image_tag(current_user.image_name_url, class: "image-icon") if current_user.image_name? %>
+        </div>
+      <% else %>
+        <div class="profile-edit">
+          <%= image_tag("https://nureyon.com/sample/7/upper_body-1-p14.svg?1601332163", class: "image-icon") %>
+        </div>
+      <% end %>
+        <div class="field">
+          <div class="profile-edit-title">
+            <%= f.label :image_name, "アイコン画像" %>
+          </div>
+          <div class="profile-edit-value">
+            <%= f.file_field :image_name, class: "hidden" %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="profile-edit-title">
+            <%= f.label :name, "名前" %>
+          </div>
+          <div class="profile-edit-value">
+            <%= f.text_field :name, class: "profile-field", placeholder: @user.name, autofocus: true %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="profile-edit-title">
+            <%= f.label :introduction, "自己紹介文" %>
+          </div>
+          <div class="profile-edit-value">
+            <%= f.text_area :introduction, class: "profile-field text", autofocus: true %>
+          </div>
+        </div>
+      <%= f.submit "更新", class: "actions profile-field-btn" %>
+      <%= link_to "戻る", :back, class: "profile-field-btn btn" %>
+    <% end %>
+  </div>
+</div>
