@@ -1,0 +1,32 @@
+<div class="container-device">
+  <div class="device-fram">
+    <div class="device-fram-inner">
+      <h1 class="heading">新しいアカウントを作成</h1>
+      <%= form_with model:@user, local: true do |f| %>
+        <%= render "users/shared/error_messages", resource: resource %>
+        <div class="signup-field-content">
+          <div class="signup-field">
+            <%= f.text_field :name, class: "signup-field-btn", placeholder: "ユーザー名", autofocus: true, autocomplete: "name" %>
+          </div>
+        </div>
+        <div class="signup-field-content">
+          <div class="signup-field">
+            <%= f.email_field :email, class: "signup-field-btn", placeholder: "メールアドレス", autofocus: true, autocomplete: "email" %>
+          </div>
+        </div>
+        <div class="signup-field-content">
+          <div class="signup-field">
+            <%= f.password_field :password, class: "signup-field-btn", placeholder: "パスワード", autocomplete: "new-password" %>
+          </div>
+        </div>
+        <div class="signup-field-content">
+          <div class="signup-field">
+            <%= f.password_field :password_confirmation, class: "signup-field-btn", placeholder: "パスワード確認", autocomplete: "new-password" %>
+          </div>
+        </div>
+        <%= f.submit "新しいアカウントを作成", class: "actions" %>
+      <% end %>
+      <%= link_to "既にアカウントをお持ちの方はログイン", new_user_session_path, class: "return-login" %>
+    </div>
+  </div>
+</div>

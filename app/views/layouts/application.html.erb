@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -16,21 +17,50 @@
           <div class="header-logo">
             <%= link_to image_tag("https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png"), root_path %>
           </div>
-          <div class="search-items">
-            <div class="area">エリア検索</div>
-            <div class="keyword">キーワード検索</div>
+          <div class="nav-search-items">
+            <div class="search-areas">
+              <div class="area">
+                <%= search_form_for @q do |f| %>
+                  <%= f.search_field :address_cont, placeholder: "エリア", class: "area-btn" %>
+                <% end %>
+              </div>
+              <div class="keyword">
+                <%= search_form_for @q do |f| %>
+                  <%= f.search_field :address_or_title_or_introduction_cont, placeholder: "\uF002キーワード", class: "keyword-btn" %>
+                <% end %>
+              </div>
+            </div>
           </div>
         </div>
         <div class="header-right">
-          <div class="login btn">
-            <%= link_to "ログイン", new_user_session_path %>
-          </div>
-          <div class="signup btn">
-            <%= link_to "登録する", new_user_registration_path %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="logout">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
+            </div>
+            <div class="current-user-icon">
+              <%= current_user.name %>
+            </div>
+            <%= link_to account_users_path do %>
+              <% if current_user.image_name? %>
+                <div class="signed-user">
+                  <%= image_tag(current_user.image_name_url, class: "image-icon") if current_user.image_name? %>
+                </div>
+              <% else %>
+                <div class="signed-user">
+                  <%= image_tag("https://nureyon.com/sample/7/upper_body-1-p14.svg?1601332163", class: "image-icon") %>
+                </div>
+              <% end %>
+            <% end %>
+          <% else %>
+            <div class="login-signup-btns">
+              <%= link_to "ログイン", new_user_session_path, class: "login-btn" %>
+              <%= link_to "登録する", new_user_registration_path, class: "signup-btn" %>
+          <% end %>
         </div>
       </div>
     </header>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
     <%= yield %>
     <footer>
       <div class="fooder-container">

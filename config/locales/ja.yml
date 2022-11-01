@@ -1,0 +1,30 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        image_name: 画像
+        introduction: 一言紹介
+ja:
+  activerecord:
+    models:
+      reservation: 予約
+    attributes:
+      reservation:
+        end_date: 終了日
+        start_date: 開始日
+        member: 人数
+ja:
+  activerecord:
+    models:
+      roon: ルーム
+    attributes:
+      room:
+        title: ルーム名
+        price: 料金
+        address: 住所
+        image: ルーム画像
+        introduction: ルーム紹介

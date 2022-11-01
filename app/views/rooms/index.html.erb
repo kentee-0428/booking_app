@@ -1,0 +1,27 @@
+<div class="rooms-container">
+  <div class="rooms-count">
+    <h1>検索結果：<%= @rooms.count %></h1>
+  </div>
+  <div class="rooms">
+    <% @rooms.each do |room| %>
+      <%= link_to room_path(room), class: "rooms-link" do %>
+        <div class="rooms-aroom">
+          <div class="rooms-image">
+            <%= image_tag(room.image_url, class: "rooms-image-icon", alt: "お部屋のイメージ") %>
+          </div>
+          <div class="rooms-profile">
+            <div class="rooms-title">
+              <%= room.title %>
+            </div>
+            <div class="rooms-address">
+              <%= room.address %>
+            </div>
+            <div class="rooms-price">
+              ¥<%= room.price %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
